@@ -1,0 +1,38 @@
+@use '../../shared/styles/variables';
+
+
+.user {
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+
+    &__avatar {
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 16px;
+        background-color: rgb(206, 206, 206)
+    }
+
+    &__content {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        gap: 8px;
+
+        .name {
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .email {
+            color: variables.$secondary-text;
+        }
+    
+        .bio {
+            color: variables.$content-text;
+        }
+    }   
+}
