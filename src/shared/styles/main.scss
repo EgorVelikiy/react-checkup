@@ -38,3 +38,10 @@ body {
     border: 1px solid #b8b8b8;
     border-radius: 14px;
 }
+
+ul {
+    list-style-type: none;
+    flex-direction: column;
+    display: flex;
+    gap: 25px;
+}

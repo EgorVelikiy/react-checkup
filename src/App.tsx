@@ -1,12 +1,18 @@
 import UserProfile from './components/user/user-profile'
 import './App.css'
-import { user } from './mocks/user'
+import { users } from './mocks/user'
 
 function App() {
   return (
-    <div className='card'>
-      <UserProfile user={user} />
-    </div>
+    <ul>
+      {users.map((user => (
+        <li key={user.email}>
+          <div className='card'>
+            <UserProfile user={user} />
+          </div>
+        </li>
+      )))}
+    </ul>
   )
 }
 
