@@ -5,13 +5,11 @@ import { users } from './mocks/user'
 function App() {
   return (
     <ul>
-      {users.map((user => (
-        <li key={user.email}>
-          <div className='card'>
+      {users.map(user => (
+        <li className='card' key={user.email}>
             <UserProfile user={user} />
-          </div>
         </li>
-      )))}
+      ))}
     </ul>
   )
 }
