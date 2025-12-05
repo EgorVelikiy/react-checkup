@@ -1,20 +1,14 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 import './registration-form.css'
-
-interface FormData {
-    name: string;
-    email: string;
-    password: string;
-    age: string;
-    city: string;
-    color: string;
-}
+import { type FormData } from "../types";
+import ValidationError from "../error/error";
 
 export default function RegistrationForm() {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm<FormData>({
         mode: 'onChange',
         defaultValues: {
@@ -29,6 +23,7 @@ export default function RegistrationForm() {
 
     const onSubmit: SubmitHandler<FormData> = (data) => {
         alert(`Спасибо за регистрацию, ${data.name}!`);
+        reset();
     }
 
     return (
@@ -47,8 +42,9 @@ export default function RegistrationForm() {
                         maxLength: { value: 30, message: "Максимум 30 символов" }
                     })}
                     placeholder="Введите ваше имя"
+                    className={errors.name ? 'input-error' : ''}
                 />
-                <span className="error">{errors.name?.message}</span>
+               <ValidationError message={errors.name?.message} />
             </label>
             <label htmlFor="email">
                 Email
@@ -59,8 +55,9 @@ export default function RegistrationForm() {
                         required: "Email обязателен",
                     })}
                     placeholder="example@email.com"
+                    className={errors.email ? 'input-error' : ''}
                 />
-                <span className="error">{errors.email?.message}</span>
+                <ValidationError message={errors.email?.message} />
             </label>
             <label htmlFor="password">
                 Пароль
@@ -72,8 +69,9 @@ export default function RegistrationForm() {
                         minLength: { value: 6, message: "Минимум 6 символов" },
                     })}
                     placeholder="Введитие пароль"
+                    className={errors.password ? 'input-error' : ''}
                 />
-                <span className="error">{errors.password?.message}</span>
+                <ValidationError message={errors.password?.message} />
             </label>
             <label htmlFor="age">
                 Возраст
@@ -85,8 +83,9 @@ export default function RegistrationForm() {
                         max: { value: 100, message: "Возраст должен быть не более 100" },
                     })}
                     placeholder="Введите ваш возраст"
+                    className={errors.age ? 'input-error' : ''}
                 />
-                <span className="error">{errors.age?.message}</span>
+                <ValidationError message={errors.age?.message} />
             </label>
             <label htmlFor="city">
                 Город
@@ -94,26 +93,25 @@ export default function RegistrationForm() {
                     id="city"
                     {...register("city", { required: "Город обязателен" })}
                     placeholder="Введите ваш город"
+                    className={errors.city ? 'input-error' : ''}
                 />
-                <span className="error">{errors.city?.message}</span>
+                <ValidationError message={errors.city?.message} />
             </label>
             <label htmlFor="color">
                 Любимый цвет
                 <select
                     id="color"
                     {...register("color", { required: "Выберите цвет" })}
+                    className={errors.color ? 'input-error' : ''}
                 >
                     <option value="" disabled hidden>Выберите цвет</option>
                     <option value="red">Красный</option>
                     <option value="blue">Синий</option>
                     <option value="green">Зеленый</option>
                 </select>
-                <span className="error">{errors.color?.message}</span>
+                <ValidationError message={errors.color?.message} />
             </label>
-            <button
-                className="btn-submit"
-                type="submit"
-            >
+            <button className="btn-submit" type="submit">
                 Зарегистрироваться
             </button>
         </form>

@@ -62,18 +62,19 @@ input:-webkit-autofill {
     -webkit-text-fill-color: black;
 }
 
+.input-error {
+    outline: 1px solid red;
+}
+.input-error:focus {
+    outline: 1px solid red;
+}
+
 .btn-submit {
     width: 100%;
+    margin-top: 1em;
 }
 
 .btn-submit:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-
-.error {
-    display: block;
-    height: 0;
-    font-size: 0.7em;
-    color: red;
 }

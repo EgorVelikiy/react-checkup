@@ -1,0 +1,13 @@
+.error {
+    display: block;
+    align-items: center;
+    height: 0;
+    font-size: 1em;
+    color: red;
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
