@@ -1,0 +1,44 @@
+.notification {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 1em;
+    padding-right: 0;
+}
+
+.draft {
+    border: 1px solid #ccc;
+}
+
+.published {
+    background-color: #F0FDF4;
+    border-color: #00C950;
+    color: #0D542B;
+}
+
+.error {
+    background-color: #fcdddb;
+    border-color: #FF3B30;
+    color: #910212;
+}
+
+.notification-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 12px;
+}
+
+.notification-title {
+    margin: 0;
+    font-weight: 500;
+}
+
+.notification-message {
+    color: #717182;
+}

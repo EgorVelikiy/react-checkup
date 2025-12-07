@@ -1,0 +1,1 @@
+export type PostStatus = 'editing' | 'draft' | 'published' | 'error'
