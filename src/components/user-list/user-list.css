@@ -1,0 +1,30 @@
+.user-list-container {
+    background-color: #F9FAFB;
+    width: 672px;
+}
+
+.user-list {
+    margin: 1.5em;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0;
+}
+
+h3 {
+    font-weight: 400;
+    margin: 0;
+    text-align: start;
+}
+
+.users-item {
+    display: flex;
+    align-items: center;
+    outline: 1px solid #E5E7EB;
+    border-radius: 8px;
+    height: 66px;
+    background-color: white;
+}
