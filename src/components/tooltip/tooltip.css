@@ -1,0 +1,25 @@
+.tooltip {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    margin: 1.5em;
+    margin-top: 0;
+    padding: 0.7em;
+}
+
+.tooltip-title {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.tooltip-item {
+    text-align: start;
+}
+
+.tooltip-btn {
+    display: inline-block;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    background-color: white;
+    padding: 2px 2px;
+}

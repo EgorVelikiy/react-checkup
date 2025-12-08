@@ -1,0 +1,50 @@
+.user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 1em 0 1em;
+    width: 100%;
+}
+
+.edit-btn:focus {
+    outline: none;
+}
+
+.edit-user,
+.save-user {
+    display: flex;
+    align-items: ba;
+    gap: 8px;
+    padding: 0.5em 0.7em;
+}
+
+.edit-user:hover,
+.save-user:hover {
+    background-color: #f5f4f4;
+}
+
+.input-user-name {
+    font-size: 1em;
+    padding: 0.7em;
+    width: 100%;
+    margin-right: 1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #F3F3F5;
+    color: #797979;
+}
+
+.input-user-name:focus {
+    outline: 1px solid #797979;
+}
+
+.user-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+}
+
+input.user-name:focus {
+    outline: 1px solid #b1b1b1;
+}
