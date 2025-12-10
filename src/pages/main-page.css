@@ -1,0 +1,28 @@
+.main-page {
+    /* display: flex; */
+    width: 100%;
+}
+
+.main-page__header {
+    margin-bottom: 1em;
+}
+
+.main-page__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.main-page__subtitle {
+    color: #717182;
+}
+
+.tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 100px;
+    border-radius: 8px;
+    color: #717182;
+}
