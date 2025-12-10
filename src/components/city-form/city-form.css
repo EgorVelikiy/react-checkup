@@ -1,0 +1,29 @@
+.city-form {
+    display: flex;
+    min-width: 50vw;
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+.city-form__input:focus {
+    outline: 1px solid #797979;
+}
+
+.city-form__add {
+    display: flex;
+    gap: 8px;
+}
+
+.city-form__add:disabled {
+    cursor: not-allowed;
+}
+
+.city-form__add:not(:disabled):hover {
+    background-color: #5c5b5b;
+}
+
+.city-form__add:focus {
+    outline: none;
+}
