@@ -16,7 +16,6 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -33,7 +32,22 @@ button {
   transition: border-color 0.25s;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+input {
+  font-size: 1em;
+  padding: 0.7em;
+  border: none;
+  border-radius: 8px;
+  background-color: #F3F3F5;
+  color: black;
+}
+
+input:focus,
+select:focus {
+  outline: 1px solid #b1b1b1;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
