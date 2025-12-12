@@ -1,0 +1,30 @@
+.card {
+    padding: 24px;
+    border: 1px solid #0000001a;
+    border-radius: 14px;
+}
+
+.user {
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user__content {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.user-profession {
+    color: #717182;
+    font-size: 16px;
+
+}

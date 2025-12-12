@@ -1,0 +1,47 @@
+.filter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    gap: 1em;
+    width: 90%;
+    font-size: 14px;
+    margin-bottom: 1.5em;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.only-chemists {
+    gap: 8px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #0000001a;
+}
+
+.only-chemists:hover {
+    background-color: #f5f4f4;
+}
+
+.reset-filter-btn:hover,
+.sort-btn:hover,
+.only-chemists-active:hover {
+    background-color: #5c5b5b;
+}
+
+select {
+    font-size: 1em;
+    padding: 0.7em;
+    width: 100%;
+    min-width: 180px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: #F3F3F5;
+    color: black;
+}
+
+select:hover {
+    outline: none;
+    border: none
+}

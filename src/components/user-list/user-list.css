@@ -1,0 +1,11 @@
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+}
+
+.users-count {
+    text-align: start;
+}

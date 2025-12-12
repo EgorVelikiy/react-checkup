@@ -1,0 +1,8 @@
+.main-page {
+    max-width: 1035px;
+}
+
+.main-page__header {
+    text-align: start;
+    margin-bottom: 2em;
+}
